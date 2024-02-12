@@ -20,5 +20,7 @@ python __main__.py
 - inbounds类型为http代理
 - 支持的节点类型：shadowsocks, vmess, vless, wireguard, trojan
 - 成功生成配置文件后，控制台会打印xray config.json已生成，端口起始位置: xxxxx, 共xx个节点，比如输出了“xray config.json已生成，端口起始位置: 40001, 共10个节点”
+- 通过命令行启动xray
+![](./readmeImg/image3.png)
 - 生成并启动xray后，通过http代理来使用结点, 如下图
 ![](./readmeImg/image2.png)
