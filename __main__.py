@@ -252,12 +252,13 @@ def set_inbounds(outbounds: List[Dict]) -> List[Dict]:
     global port_start
     inbounds = []
     port_start = find_free_ports(40000, len(outbounds))
-    for port_start, item in enumerate(outbounds, start=port_start):
+    port = port_start
+    for port, item in enumerate(outbounds, start=port):
         tag: str = item["tag"]
         inbounds.append(
             {
                 "listen": "127.0.0.1",
-                "port": port_start,
+                "port": port,
                 "protocol": "http",
                 "settings": {"auth": "noauth", "udp": False, "userLevel": 0},
                 "sniffing": {"enabled": True, "destOverride": ["http", "tls"]},
